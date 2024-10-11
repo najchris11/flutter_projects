@@ -1,0 +1,42 @@
+Lesson 23:
+The concepts of positional and named parameters. Positional parameters are passed in the order they're provided, where as named
+	parameters only get passed with their name included. i.e.: 
+	void add(a, b) { // a and b are positional parameters
+		print(a + b);
+	}
+	add(5, 10) //5 would get used as a and 10 would get used as b
+
+	void add({a, b}) { //a and b are named parameters because of the curly braces
+		print(a + b);
+	}
+	add(b: 5, a: 10); //5 would get used as b and 10 would get used as a because they're each assigned to that particular name
+
+
+	N.B. positional arguments must be provided, but named arguments are optional by default
+	in positional, to make something optional, use square brackets i.e.
+	void add(a, [b = 5]) { //the assignment of b is optional, you could just do [b]
+
+	additionally, you can make arguments required in named i.e.
+	void add({required a, required b}) { //then the two parameters are no longer optional
+
+Lesson 26:
+Const. const just tells us that things won't be changed, which speeds us performance, which allows dart to reuse values that are equal
+
+Lesson 28:
+Use types!!! void add(int num1, int num2) {
+The main types are int double num String bool Object. Where int and double are both of type num, and all of the above are of type
+Object.
+
+Lesson 36:
+Classes!! 
+Making your own class needs you to have a method called build that takes a parameter context and returns a Widget. It also needs an 
+@override. The build method should return whatever Widget you're making. i.e.
+
+class HelloWorldClass extends StatelessWidget {
+	@override
+	Widget build(context) {
+		return Text('Hello world!);
+	}
+}
+
+ you would call it by just using HelloWorldClass(), which calls the constructor function, even though we didn't make one ourselves.
